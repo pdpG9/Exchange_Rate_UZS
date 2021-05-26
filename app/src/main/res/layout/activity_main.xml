@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeContenier"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="UnusedAttribute">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linerConstrent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_black"
+        android:paddingVertical="@dimen/basePadding">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTop"
+            style="@style/baseTextViewStyle"
+            android:layout_marginStart="@dimen/baseMargin"
+            android:layout_marginTop="@dimen/baseMargin"
+            android:text="@string/joriy_valyuta_kursi"
+            android:textSize="@dimen/tvSize"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/basePadding"
+            android:src="@drawable/ic_to_bottom"
+            app:layout_constraintLeft_toRightOf="@id/tvTop"
+            app:layout_constraintTop_toTopOf="@id/tvTop" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCourseData"
+            style="@style/baseTextViewStyle"
+            android:layout_marginTop="@dimen/baseMargin"
+            android:layout_marginEnd="@dimen/tvSizeMin"
+            android:text="21.21.2021"
+            android:textSize="@dimen/tvSizeMin"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linerMain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/baseMargin"
+            android:layout_marginTop="@dimen/baseMargin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTop">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIconValuta"
+                android:layout_width="@dimen/tvSizeMax"
+                android:layout_height="@dimen/tvSizeMax"
+                android:src="@drawable/ic_dollar" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCourseValuta"
+                style="@style/baseTextViewStyle"
+                android:layout_marginStart="@dimen/basePadding"
+                android:text="2,445."
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/tvSizeMax" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoursePoint"
+                style="@style/baseTextViewStyle"
+                android:text="21"
+                android:textColor="@color/color_silver"
+                android:textSize="@dimen/tvSizeMax" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linerMin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/baseMargin"
+            android:layout_marginTop="@dimen/baseMargin"
+            android:gravity="center"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linerMain">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIconDataMain"
+                android:layout_width="@dimen/tvSize"
+                android:layout_height="@dimen/tvSize"
+                android:src="@drawable/ic_dollar"
+                app:tint="@color/color_silver" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCourseValutaMin"
+                style="@style/baseTextViewStyle"
+                android:layout_marginStart="@dimen/basePadding"
+                android:text="2,449.49"
+                android:textColor="@color/color_silver2"
+                android:textSize="@dimen/tvSizeMin" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoursePersentMin"
+                style="@style/baseTextViewStyle"
+                android:layout_marginStart="@dimen/baseMargin"
+                android:text="4.28"
+                android:textColor="@color/color_green"
+                android:textSize="@dimen/tvSizeMin" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIconPercentMin"
+                android:layout_width="@dimen/tvSizeMin"
+                android:layout_height="@dimen/tvSizeMin"
+                android:layout_marginStart="1dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_percent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivIconState"
+                android:layout_width="@dimen/tvSizeMin"
+                android:layout_height="@dimen/tvSizeMin"
+                android:layout_marginStart="3dp"
+                android:src="@drawable/ic_north_east" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linerList"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/baseMargin"
+            android:background="@drawable/bg_layout_list"
+            android:orientation="vertical"
+            android:padding="@dimen/basePadding"
+            android:paddingHorizontal="@dimen/baseMargin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linerMin">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                style="@style/baseTextViewStyle"
+                android:layout_marginTop="@dimen/basePadding"
+                android:text="@string/barcha_valyuta_kurslari"
+                android:textColor="@color/color_black"
+                android:textSize="@dimen/tvSize"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/listValuta"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/tvSizeMin"
+                tools:listitem="@layout/item_valuta" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

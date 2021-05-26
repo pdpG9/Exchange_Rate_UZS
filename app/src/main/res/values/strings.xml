@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Exchange_Rate_UZS</string>
+    <string name="joriy_valyuta_kursi">Joriy valyuta kursi</string>
+    <string name="uzs">UZS</string>
+    <string name="barcha_valyuta_kurslari">Barcha valyuta kurslari</string>
+    <string name="nominal">Nominal: </string>
+</resources>
